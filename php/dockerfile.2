@@ -1,0 +1,5 @@
+FROM php:7.2-fpm
+RUN docker-php-ext-install mysqli && docker-php-ext-install pdo_mysql
+RUN apt update && apt install -y libwebp-dev libjpeg-dev libpng-dev libfreetype6-dev \
+    && docker-php-source extrac && cd /usr/src/php/ext/gd \
+    && docker-php-ext-configure gd --with-webp-dir=/usr/include/webp --with-jpeg-dir=/usr/include --with-png-dir=/usr/include --with-freetype-dir=/usr/include/freetype2 && docker-php-ext-install gd

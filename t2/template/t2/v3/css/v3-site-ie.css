@@ -1,0 +1,18 @@
+.carousel-control .fa-chevron-left,.carousel-control .fa-chevron-right{
+  left:50%;
+  margin-left: -15px;
+}
+
+.z-nav .col-md-3{
+	*width:21.77%;
+}
+.input-group .search-query{
+	*width: 70%;
+}
+.input-group, .input-group-btn{
+	*zoom:1;
+}
+
+.col-xs-6 .recotitle{
+	*height: 36px;
+}

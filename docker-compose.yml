@@ -1,0 +1,32 @@
+version: '3'
+
+services:
+
+ mysql:
+  image: mysql:5.7
+  ports:
+   - 3306:3306
+  environment:
+   MYSQL_ROOT_PASSWORD: 1234
+
+ php:
+  build:
+   context: ./php
+   dockerfile: dockerfile
+  links:
+   - mysql
+  ports:
+   - 9000:9000
+  volumes: 
+   - /root/lnmp/var/nginx/www/html:/var/www/html
+
+ nginx:
+  image: nginx:1.18.0
+  links:
+   - mysql
+   - php
+  volumes:
+   - /root/lnmp/var/nginx/www/html:/var/www/html
+   - /root/lnmp/etc/nginx/conf.d:/etc/nginx/conf.d
+  ports:
+   - 80:80
