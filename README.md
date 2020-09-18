@@ -1,5 +1,8 @@
 #### 简介
 - docker-compose 一键搭建LNMP平台，并集成了一个《发货100》的php项目
+- nginx版本号：1.18.0
+- mysql版本号：5.7
+- php版本号：7.2-fpm
 
 <br>
 
