@@ -1,0 +1,10 @@
+# mysql外部的暴露的端口号
+mysql_port=3306
+# php外部的暴露的端口号
+php_port=9000
+# nginx外部的暴露的端口号
+nginx_port=80
+# nginx配置文件的路径
+directory_conf=/root/lnmp/etc/nginx/conf.d/
+# nginx项目的路径
+directory_html=/root/lnmp/var/nginx/www/html/

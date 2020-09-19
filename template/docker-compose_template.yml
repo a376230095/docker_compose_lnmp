@@ -5,7 +5,7 @@ services:
  mysql:
   image: mysql:5.7
   ports:
-   - 13306:3306
+   - 3306:3306
   environment:
    MYSQL_ROOT_PASSWORD: 1234
 
@@ -16,7 +16,7 @@ services:
   links:
    - mysql
   ports:
-   - 19000:9000
+   - 9000:9000
   volumes: 
    - /root/lnmp/var/nginx/www/html:/var/www/html
 
@@ -27,6 +27,6 @@ services:
    - php
   volumes:
    - /root/lnmp/var/nginx/www/html:/var/www/html
-   - /root/lnmp/etc/nginx/conf.dci/:/etc/nginx/conf.d
+   - /root/lnmp/etc/nginx/conf.d:/etc/nginx/conf.d
   ports:
-   - 180:80
+   - 80:80
