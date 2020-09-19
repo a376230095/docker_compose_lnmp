@@ -17,6 +17,9 @@
  
  <br>
  
+#### config配置文件
+- 修改nginx的配置文件路径，修改nginx的项目路径，修改对外暴露的nginx、mysql、php的端口号
+ 
 #### docker-compse的内容
 - 项目会自动生成两个目录：
   - /root/lnmp/var/nginx/www/html
@@ -38,11 +41,13 @@
 <br>
 
 #### 文件结构:
-- default.conf：存放nginx的配置信息  
+- default.conf：存放nginx的配置信息
 - docker-compose.yml：构建docker-compose的yml文件
 - php：构建php的dockerfile文件夹
 - start.sh：自动运行
 - t2：《发货100》的源码
+- config：配置文件
+- template：配置文件和docker-compose的备份和简单的测试脚本
 
 <br>
 
